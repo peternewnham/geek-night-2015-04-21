@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Devices, Browsers &amp; You - Swindon Geek Night</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="css/geeknight.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,337 +41,805 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
+				<!-- Title -->
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+
+					<h1>Devices, Browsers and You</h1>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Who I am, what I do</li>
+                            <li>Talk about the ways you can interact with hardware directly from within a browser</li>
+                            <li>Look at some of the fun things you can do</li>
+                        </ul>
+                    </aside>
+
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+                <!-- Introduction -->
+                <section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                    <section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+                        <h1>A Brief History</h1>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                        <aside class="notes">
+                            <ul>
+                                <li>History of user interaction in the browser</li>
+                            </ul>
+                        </aside>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+                    </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                    <section>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+                        <h2>User Interaction</h2>
+                        <ul>
+                            <li class="fragment">
+                                HTML controls
+                                <ul>
+                                    <li><code>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                Javascript events
+                                <ul>
+                                    <li class="fragment">
+                                        Keyboard - <code>onkeydown, onkeyup, etc</code>
+                                    </li>
+                                    <li class="fragment">
+                                        Mouse - <code>onclick, onmouseover, etc</code>
+                                    </li>
+                                    <li class="fragment">
+                                        Touch - <code>touchstart, touchmove, etc</code>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+                        <aside class="notes">
+                            <ul>
+                                <li>HTML controls allowed users to enter data</li>
+                                <li>Javascript events let do something in response to a user actions</li>
+                                <li>Touch events - introduced in 2007 by Apple with the first iPhone</li>
+                            </ul>
+                        </aside>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+                    </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+                    <section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+                        <h2>But I Want More!</h2>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+                        <ul>
+                            <li class="fragment">Install separate program</li>
+                            <li class="fragment">
+                                Use a plugin
+                                <ul>
+                                    <li>Flash</li>
+                                    <li>Java applet</li>
+                                    <li>Silverlight</li>
+                                </ul>
+                            </li>
+                        </ul>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+                        <aside class="notes">
+                            <ul>
+                                <li>Learn new language</li>
+                                <li>Not compatible cross devices</li>
+                            </ul>
+                        </aside>
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-				</section>
+                    </section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+                    <section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+                        <h2>How do we get around this?</h2>
+                        <img class="fragment" src="img/html5_hero.jpg">
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                        <aside class="notes">
+                            <ul>
+                                <li>HTML5 to the rescue!</li>
+                            </ul>
+                        </aside>
 
-    var nodes = document.querySelectorAll( selector );
+                    </section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+                    <section>
+                        <h1>HTML5</h1>
+                        <ul>
+                            <li class="fragment">
+                                New elements
+                                <ul>
+                                    <li><code>&lt;video&gt;, &lt;audio&gt;, &lt;canvas&gt;</code></li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                Native APIs
+                                <ul>
+                                    <li>Access device hardware directly from javascript</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                Write once, run anywhere <span class="fragment">(ish)</span>
+                                <ul class="fragment">
+                                    <li>Still at the mercy of cross browser compatibility</li>
+                                    <li>
+                                        Chrome + Firefox around 65%
+                                        <br><small style="float:right"><a href="http://gs.statcounter.com/#browser-ww-monthly-201403-201502">statcounter.com</a></small>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
+                        <aside class="notes">
+                            <ul>
+                                <li>So let's take a look at what we can do</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                </section>
+
+                <!-- Navigator.getUserMedia -->
+                <section>
+
+                    <section>
+
+                        <h2 class="normal">Navigator.getUserMedia</h2>
+
+                        <div>
+                            <ul>
+                                <li class="fragment">Camera</li>
+                                <li class="fragment">Microphone</li>
+                                <li class="fragment">Screen sharing </li>
+                                <li class="fragment">User permission required</li>
+                            </ul>
+                        </div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Javascript API</li>
+                                <li>Required user permission so no funny business</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Browser Support</h2>
+                        <table class="reveal support">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th><img src="img/chrome.png"></th>
+                                <th><img src="img/firefox.png"></th>
+                                <th><img src="img/ie.png"></th>
+                                <th><img src="img/opera.png"></th>
+                                <th><img src="img/safari.png"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Desktop</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Good old Internet Explorer</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Example</h2>
+                        <pre><code data-trim class="full javascript">
+var getUserMedia = navigator.getUserMedia ||
+                   navigator.webkitGetUserMedia ||
+                   navigator.mozGetUserMedia;
+getUserMedia(
+    {
+        audio: true,
+        video: true  // can also be a config object
+    },
+    function(stream) {
+        var video = document.querySelector('video');
+        video.src = window.URL.createObjectURL(stream);
+        video.onloadedmetadata = function(e) {
+            video.play();
+        };
+    },
+    function(err) {
+        console.log("The following error occurred: " + err.name);
     }
-  }
+);
+                        </code></pre>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Vendor prefixes required</li>
+                                <li>When W3C specification is introduced the browser may implement a version before it reaches Candidate Recommendation status</li>
+                                <li>Config object, success handler, error handler</li>
+                                <li>Error if user denies access</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Example</h2>
+                        <div class="stretch content-holder" id="example-video-content"></div>
+                        <div class="fragment" id="example-video"></div>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Asks for my permission</li>
+                                <li>Once granted it streams to the video element</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                </section>
+
+                <!-- Camera -->
+                <section>
+
+                    <section>
+
+                        <h1>Camera</h1>
+
+                        <aside class="notes">
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h1>Uses</h1>
+
+                        <ul>
+                            <li class="fragment">Video chat, conferencing</li>
+                            <li class="fragment">Motion detection</li>
+                            <li class="fragment">Facial recognition</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Hangouts, skype</li>
+                                <li>Gestures, Kinect-like functions</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h1>Facial Substitution Demo</h1>
+
+                        <p>
+                            <small><a href="http://auduno.github.io/clmtrackr/examples/facesubstitution.html">http://auduno.github.io/clmtrackr/examples/facesubstitution.html</a></small>
+                        </p>
+
+                        <ul>
+                            <li>clmtrackr</li>
+                            <li>WebGL</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>All done with javascript</li>
+                                <li>Implementation of constrained local models fitted by regularized landmark mean-shift</li>
+                                <li>You can tell it must be good because they don't need to include an e in the tracker</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                </section>
+
+                <!-- Microphone -->
+                <section>
+
+                    <section>
+                        <h1>Microphone</h1>
+                    </section>
+
+                    <section>
+
+                        <h1>Uses</h1>
+
+                        <ul>
+                            <li class="fragment">Phone calls</li>
+                            <li class="fragment">Voice commands</li>
+                            <li class="fragment">
+                                Speech to text
+                                <ul>
+                                    <li>Web Speech API - Chrome only</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                Doppler effect
+                                <ul>
+                                    <li>
+                                        <a style="font-size:0.85em" href="http://danielrapp.github.io/doppler/">http://danielrapp.github.io/doppler/</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Phone calls - less bandwidth than video</li>
+                                <li>Detect Doppler Effect in the browser pretty cool - released a small library so others can also use it</li>
+                                <li>I wanted to use it</li>
+                                <li>Thought long and hard about a potential use that would benefit mankind and finally came up with one</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <img class="stretch" src="img/dopply.png">
+
+                    </section>
+
+                </section>
+
+                <!-- Device Orientation -->
+                <section>
+
+                    <section>
+                        <h1>Device Orientation</h1>
+                        <h2>Accelerometer, Gyroscope &amp; Magnometer</h2>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Movement</li>
+                                <li>Orientation</li>
+                                <li>Compass</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Orientation</h2>
+                        <img class="stretch" src="img/orientation.png">
+
+                        <small style="float:left;text-align:left;">
+                            <b>alpha</b>
+                            <br>
+                            the number of degrees<br> the device is being twisted<br> around the center of<br> the screen
+                        </small>
+
+                        <small style="float:right;text-align:right;">
+                            <b>gamma</b>
+                            <br>
+                            the number of degrees<br> the device is turned<br> left or right
+                        </small>
+
+                        <small>
+                            <b>beta</b>
+                            <br>
+                            the number of degrees<br> the device is tipped <br>forward or backward
+                        </small>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Alpha - spinning</li>
+                                <li>Beta - flipping over head to front</li>
+                                <li>Gamma - rolling over on side</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Example</h2>
+                        <pre><code data-trim class="full javascript">
+window.addEventListener("deviceorientation", function(event) {
+
+    var alpha = event.alpha; // degress twisted around center
+    var beta = event.beta; // degrees tipped forward or backward
+    var gamma = event.gamma; // degrees turned left or right
+
+    // do something awesome here
+
+}, true);
+                        </code></pre>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Subscribe to the deviceorientation event</li>
+                                <li>Event object contains all information</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Browser Support</h2>
+                        <table class="reveal support">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th><img src="img/chrome.png"></th>
+                                <th><img src="img/firefox.png"></th>
+                                <th><img src="img/ie.png"></th>
+                                <th><img src="img/opera.png"></th>
+                                <th><img src="img/safari.png"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Desktop</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Depends on having gyroscope, accelerometer on device</li>
+                                <li>My MacBook doesn't</li>
+                                <li>Load demo!</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h1>Demo</h1>
+
+                        <a href="http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html">
+                            http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html
+                        </a>
+
+                    </section>
+
+                </section>
+
+                <!-- Geolocation -->
+                <section>
+
+                    <section>
+                        <h1>Geolocation</h1>
+                        <ul>
+                            <li class="fragment">Access user latitude and longitude</li>
+                            <li class="fragment">Permission required</li>
+                        </ul>
+                    </section>
+
+                    <section>
+
+                        <h2>Browser Support</h2>
+                        <table class="reveal support">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th><img src="img/chrome.png"></th>
+                                <th><img src="img/firefox.png"></th>
+                                <th><img src="img/ie.png"></th>
+                                <th><img src="img/opera.png"></th>
+                                <th><img src="img/safari.png"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Desktop</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td>9+</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/tick.png"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Not bad!</li>
+                                <li>Well done Internet Explorer</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Example</h2>
+                        <pre><code data-trim class="full javascript">
+navigator.geolocation.getCurrentPosition(success, error);
+
+function success(position) {
+
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    // do something clever here
+
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+function error() {
+    console.log('Unable to get location');
+}
+                        </code></pre>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+                        <aside class="notes">
+                            <ul>
+                                <li>Pass it success, error callback</li>
+                                <li>Error callback if something went wrong or user denied access</li>
+                            </ul>
+                        </aside>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
+                    </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+                    <section>
+                        <h1>Uses</h1>
+                        <ul>
+                            <li class="fragment">Find nearest [something]</li>
+                            <li class="fragment">Plot user location on map - real time tracking</li>
+                            <li class="fragment">Directions - to/from current location</li>
+                            <li class="fragment">Geocaching</li>
+                        </ul>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+                        <aside class="notes">
+                            <ul>
+                                <li>Practical like mapping</li>
+                                <li>Bit more fun like geocaching</li>
+                            </ul>
+                        </aside>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+                    </section>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+                </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+                <!-- Light Sensors -->
+                <section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+                    <section>
+                        <h1>Light Sensor</h1>
+                        <ul class="fragment">
+                            <li>
+                                Gives light intensity value in <em>lux</em>
+                                <ul>
+                                    <li>10 ~ 50 lux: Dim Environment</li>
+                                    <li>100 ~ 1000 lux: Normal</li>
+                                    <li>> 10000 lux: Bright</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+                    <section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+                        <h1>Uses</h1>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+                        <ul>
+                            <li class="fragment">Change page theme depending on light level</li>
+                        </ul>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+                        <aside class="notes">
+                            <ul>
+                                <li>In bed reading in the dark you don't want to be blinded by a bright white background</li>
+                                <li>Google Maps uses this - detects light levels and shows you either a dark map with blue roads or light map with white roads</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Browser Support</h2>
+                        <table class="reveal support">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th><img src="img/chrome.png"></th>
+                                <th><img src="img/firefox.png"></th>
+                                <th><img src="img/ie.png"></th>
+                                <th><img src="img/opera.png"></th>
+                                <th><img src="img/safari.png"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Desktop</td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/cross.png"></td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/tick.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/cross.png"></td>
+                                <td><img src="img/cross.png"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Only Firefox</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+
+                        <h2>Example</h2>
+                        <pre><code data-trim class="full javascript">
+window.addEventListener('devicelight', function (event) {
+
+    var luminosity = event.value;
+
+    // do something blindingly good here
+
+});
+                        </code></pre>
+
+                    </section>
+
+                    <section id="light-demo" class="normal">
+
+                        <h1>Demo</h1>
+
+                        <div id="light-demo-container" class="stretch content-holder">
+                            <br>
+                            <h3>Current lux level</h3>
+                            <h3 class="lux"></h3>
+                        </div>
+
+                    </section>
+
+                </section>
+
+                <!-- Others -->
+                <section>
+
+                    <section>
+                        <h1>Best of the Rest</h1>
+                    </section>
+
+                    <section>
+                        <h1>Proximity</h1>
+                        <ul>
+                            <li class="fragment">Detect when a user is close to the screen</li>
+                            <li class="fragment">Firefox only :(</li>
+                        </ul>
+
+                        <pre class="fragment"><code data-trim class="full javascript">
+window.addEventListener('userproximity', function(event) {
+    if (event.near) {
+        console.log('user is near');
+    }
+    else {
+        console.log('user is not near');
+    }
+}, true);
+                        </code></pre>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>You've all used a proximity sensor</li>
+                                <li>When making phone call - put phone to head, screen turns off</li>
+                                <li>Take phone away from head, screen turns back on</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+                        <h1>Vibration</h1>
+                        <p class="fragment">Chrome, Firefox and Opera</p>
+                        <pre class="fragment"><code data-trim class="full javascript">
+// Vibrate once for one second
+navigator.vibrate(1000);
+
+// Vibrate for 3 seconds, wait 2 seconds, then vibrate for 1 second
+navigator.vibrate([3000, 2000, 1000]);
+                        </code></pre>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Chrome, Firefox and Opera support</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+                        <h1>Battery Status</h1>
+                        <p class="fragment">Chrome, Firefox and Opera</p>
+                        <pre class="fragment"><code data-trim class="full javascript">
+navigator.getBattery().then(function(battery) {
+    battery.charging; // true/false
+    battery.level; // % displayed as decimal from 0 to 1
+    battery.chargingTime; // time spent charging
+    battery.dischargingTime; // time spent not charging
+});
+                        </code></pre>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Chrome, Firefox and Opera support</li>
+                            </ul>
+                        </aside>
+
+                    </section>
+
+                    <section>
+                        <h2>More coming (one day)</h2>
+                        <ul>
+                            <li class="fragment">Temperature</li>
+                            <li class="fragment">Humidity</li>
+                            <li class="fragment">Air Pressure</li>
+                            <li class="fragment">Noise Level</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <h1>The end</h1>
+
+                </section>
 
 			</div>
 
@@ -378,6 +847,7 @@ Reveal.addEventListener( 'customevent', function() {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+        <script src="js/geeknight.js"></script>
 
 		<script>
 

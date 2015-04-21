@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video></video>
+
+<script>
+    navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia;
+
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia(
+            {
+                audio: true,
+                video: true
+            },
+            function(stream) {
+                var video = document.querySelector('video');
+                video.src = window.URL.createObjectURL(stream);
+                video.onloadedmetadata = function(e) {
+                    video.play();
+                };
+            },
+            function(err) {
+                alert("The following error occured: " + err.name);
+            }
+        );
+    } else {
+        alert("getUserMedia not supported");
+    }
+</script>
+</body>
+</html>
